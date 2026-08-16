@@ -3,59 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Quiz</title>
+    <title>Football Quiz: Guess the Player</title>
     
-    <!-- 1. Նախ բեռնում ենք տվյալների ֆայլերը -->
+    <!-- 1. Կանչում ենք արտաքին տվյալների բազաները -->
     <script src="clubs.js"></script>
     <script src="players.js"></script>
 
     <style>
-        /* Այստեղ քո դիզայնի կոդն է (body, .container, և այլն) */
-        body { font-family: sans-serif; background-color: #1a1a2e; color: white; text-align: center; }
-        .logos-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 20px; }
-        .logo-box { background: white; padding: 10px; border-radius: 10px; height: 100px; display: flex; align-items: center; justify-content: center; }
-        .logo-box img { max-width: 80px; max-height: 80px; }
-        #suggestions { background: white; color: black; position: absolute; width: 80%; left: 10%; z-index: 100; max-height: 150px; overflow-y: auto; display: none; text-align: left; }
-        .suggestion-item { padding: 10px; border-bottom: 1px solid #ccc; cursor: pointer; }
-        input { padding: 10px; width: 80%; margin-top: 20px; }
-        #score { font-size: 24px; margin: 20px; color: #e94560; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a2e; color: white; text-align: center; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        .logos-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px; background: #16213e; padding: 15px; border-radius: 15px; }
+        .logo-box { background: white; padding: 10px; border-radius: 10px; display: flex; align-items: center; justify-content: center; height: 100px; }
+        .logo-box img { max-width: 80px; max-height: 80px; object-fit: contain; }
+        input { width: 80%; padding: 12px; border-radius: 8px; border: none; font-size: 16px; margin-bottom: 10px; }
+        #suggestions { background: white; color: black; position: absolute; left: 10%; right: 10%; max-height: 200px; overflow-y: auto; z-index: 10; border-radius: 0 0 8px 8px; text-align: left; display: none; }
+        .suggestion-item { padding: 10px; cursor: pointer; border-bottom: 1px solid #eee; }
+        .suggestion-item:hover { background-color: #f0f0f0; }
+        button { padding: 12px 25px; background-color: #e94560; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; margin: 5px; }
+        #score { font-size: 20px; margin-top: 20px; color: white; background: #e94560; display: inline-block; padding: 5px 15px; border-radius: 20px; }
+        .message { margin-top: 15px; font-weight: bold; min-height: 24px; }
     </style>
 </head>
 <body>
 
-    <div id="score">Միավորներ: 0</div>
-    
-    <div class="logos-container" id="logos"></div>
+<div class="container">
+    <h1>Գուշակիր խաղացողին</h1>
+    <p>Ո՞վ է խաղացել այս բոլոր թիմերում</p>
 
-    <div style="position: relative;">
-        <input type="text" id="playerInput" placeholder="Գրիր խաղացողի անունը..." autocomplete="off">
-        <div id="suggestions"></div>
+    <div id="score">Միավորներ: 0</div>
+
+    <div class="logos-container" id="logos">
+        <!-- Լոգոները կհայտնվեն այստեղ -->
     </div>
 
+    <div style="position: relative;">
+        <input type="text" id="playerInput" placeholder="Գրիր անունը..." autocomplete="off">
+        <div id="suggestions"></div>
+    </div>
+    
     <br>
-    <button onclick="checkAnswer()" style="padding: 10px 20px; background: #e94560; color: white; border: none; margin-top: 10px;">Ստուգել</button>
-    <button onclick="nextRound()" style="padding: 10px 20px; background: #0f3460; color: white; border: none;">Հաջորդը</button>
+    <button onclick="checkAnswer()">Ստուգել</button>
+    <button onclick="nextRound()" style="background-color: #0f3460;">Հաջորդը</button>
 
-    <div id="message" style="margin-top: 20px; font-weight: bold;"></div>
+    <div class="message" id="message"></div>
+</div>
 
 <script>
-    // ԱՅՍՏԵՂ ԱՅԼԵՎՍ ՉՊԵՏՔ Է ԼԻՆԵՆ clubsData կամ playersData փոփոխականները
-    // Դրանք ավտոմատ կգան clubs.js և players.js ֆայլերից
-
     let currentClubs = [];
-    let score = 0;
+    let score = parseInt(localStorage.getItem('football_score')) || 0;
+    document.getElementById('score').innerText = `Միավորներ: ${score}`;
 
     const playerInput = document.getElementById('playerInput');
     const suggestionsDiv = document.getElementById('suggestions');
 
-    // Autocomplete logic
+    // Autocomplete (Ինքնալրացում)
     playerInput.addEventListener('input', function() {
         const val = this.value.toLowerCase();
         suggestionsDiv.innerHTML = '';
-        if (!val) { suggestionsDiv.style.display = 'none'; return; }
+        if (!val || val.length < 2) { suggestionsDiv.style.display = 'none'; return; }
 
         const filtered = playersData.filter(p => p.name.toLowerCase().includes(val));
-        filtered.forEach(player => {
+        
+        filtered.slice(0, 10).forEach(player => {
             const div = document.createElement('div');
             div.innerHTML = player.name;
             div.className = 'suggestion-item';
@@ -65,27 +74,31 @@
             };
             suggestionsDiv.appendChild(div);
         });
+
         suggestionsDiv.style.display = filtered.length > 0 ? 'block' : 'none';
     });
 
+    // Հաջորդ փուլ
     function nextRound() {
         document.getElementById('message').innerText = "";
         playerInput.value = "";
+        suggestionsDiv.style.display = 'none';
         const logosDiv = document.getElementById('logos');
         logosDiv.innerHTML = "";
 
-        // Ընտրում ենք 4 պատահական ակումբ
+        // Ընտրել 4 պատահական ակումբ clubs.js-ից
         let shuffled = [...clubsData].sort(() => 0.5 - Math.random());
         currentClubs = shuffled.slice(0, 4);
 
         currentClubs.forEach(club => {
             const div = document.createElement('div');
             div.className = 'logo-box';
-            div.innerHTML = `<img src="${club.logo}">`;
+            div.innerHTML = `<img src="${club.logo}" alt="${club.name}">`;
             logosDiv.appendChild(div);
         });
     }
 
+    // Պատասխանի ստուգում
     function checkAnswer() {
         const name = playerInput.value.trim();
         const player = playersData.find(p => p.name.toLowerCase() === name.toLowerCase());
@@ -101,20 +114,21 @@
 
             if (matches > 0) {
                 score += matches;
+                localStorage.setItem('football_score', score);
                 msg.style.color = "#4caf50";
                 msg.innerText = `Ճիշտ է! ${player.name}-ը խաղացել է այս թիմերից ${matches}-ում: +${matches} միավոր`;
                 document.getElementById('score').innerText = `Միավորներ: ${score}`;
             } else {
                 msg.style.color = "#ff4d4d";
-                msg.innerText = "Այս խաղացողը չի խաղացել նշված թիմերից ոչ մեկում:";
+                msg.innerText = "Այս խաղացողը չի խաղացել նշված թիմերից և ոչ մեկում:";
             }
         } else {
             msg.style.color = "#ff4d4d";
-            msg.innerText = "Խաղացողը չգտնվեց:";
+            msg.innerText = "Խաղացողը չգտնվեց բազայում:";
         }
     }
 
-    // Խաղը սկսելու համար
+    // Սկսել խաղը բեռնվելուն պես
     window.onload = nextRound;
 </script>
 
