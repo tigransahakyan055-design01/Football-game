@@ -1,5 +1,4 @@
 const playersData = [
-    // --- Գերաստղեր և Լեգենդներ ---
     { name: "Cristiano Ronaldo", clubs: ["Manchester United", "Real Madrid", "Juventus"] },
     { name: "Lionel Messi", clubs: ["Barcelona", "PSG"] },
     { name: "Zlatan Ibrahimovic", clubs: ["Juventus", "Inter Milan", "Barcelona", "AC Milan", "PSG", "Manchester United"] },
@@ -16,8 +15,6 @@ const playersData = [
     { name: "Robert Lewandowski", clubs: ["Dortmund", "Bayern Munich", "Barcelona"] },
     { name: "Erling Haaland", clubs: ["Dortmund", "Manchester City"] },
     { name: "Kylian Mbappe", clubs: ["Monaco", "PSG", "Real Madrid"] },
-
-    // --- Ճամփորդողներ (Շատ ակումբներ փոխած) ---
     { name: "Nicolas Anelka", clubs: ["Arsenal", "Real Madrid", "PSG", "Liverpool", "Manchester City", "Chelsea", "Juventus"] },
     { name: "Alexis Sanchez", clubs: ["Udinese", "Barcelona", "Arsenal", "Manchester United", "Inter Milan", "Marseille"] },
     { name: "Pierre-Emerick Aubameyang", clubs: ["AC Milan", "Monaco", "Lille", "Saint-Etienne", "Dortmund", "Arsenal", "Barcelona", "Chelsea", "Marseille"] },
@@ -32,8 +29,6 @@ const playersData = [
     { name: "Mario Balotelli", clubs: ["Inter Milan", "Manchester City", "AC Milan", "Liverpool", "Nice", "Marseille"] },
     { name: "Arturo Vidal", clubs: ["Bayer Leverkusen", "Juventus", "Bayern Munich", "Barcelona", "Inter Milan"] },
     { name: "Dani Alves", clubs: ["Sevilla", "Barcelona", "Juventus", "PSG"] },
-
-    // --- Կիսապաշտպաններ և Պաշտպաններ ---
     { name: "Xabi Alonso", clubs: ["Real Sociedad", "Liverpool", "Real Madrid", "Bayern Munich"] },
     { name: "Andrea Pirlo", clubs: ["Inter Milan", "AC Milan", "Juventus"] },
     { name: "Toni Kroos", clubs: ["Bayern Munich", "Bayer Leverkusen", "Real Madrid"] },
@@ -51,8 +46,6 @@ const playersData = [
     { name: "Sadio Mane", clubs: ["Southampton", "Liverpool", "Bayern Munich"] },
     { name: "Arjen Robben", clubs: ["Chelsea", "Real Madrid", "Bayern Munich"] },
     { name: "Franck Ribery", clubs: ["Marseille", "Bayern Munich", "Fiorentina"] },
-
-    // --- Դարպասապահներ ---
     { name: "Gianluigi Buffon", clubs: ["Parma", "Juventus", "PSG"] },
     { name: "Thibaut Courtois", clubs: ["Atletico Madrid", "Chelsea", "Real Madrid"] },
     { name: "Keylor Navas", clubs: ["Levante", "Real Madrid", "PSG"] },
@@ -60,8 +53,6 @@ const playersData = [
     { name: "Hugo Lloris", clubs: ["Nice", "Lyon", "Tottenham"] },
     { name: "Manuel Neuer", clubs: ["Schalke 04", "Bayern Munich"] },
     { name: "David De Gea", clubs: ["Atletico Madrid", "Manchester United", "Fiorentina"] },
-
-    // --- Անգլիական Պրեմիեր Լիգայի աստղեր ---
     { name: "Wayne Rooney", clubs: ["Everton", "Manchester United"] },
     { name: "Frank Lampard", clubs: ["West Ham", "Chelsea", "Manchester City"] },
     { name: "Steven Gerrard", clubs: ["Liverpool"] },
@@ -72,11 +63,9 @@ const playersData = [
     { name: "N'Golo Kante", clubs: ["Leicester City", "Chelsea"] },
     { name: "Robin van Persie", clubs: ["Arsenal", "Manchester United"] },
     { name: "Carlos Tevez", clubs: ["West Ham", "Manchester United", "Manchester City", "Juventus"] },
-
-    // --- Այլ հայտնի խաղացողներ ---
     { name: "Antoine Griezmann", clubs: ["Real Sociedad", "Atletico Madrid", "Barcelona"] },
     { name: "David Silva", clubs: ["Valencia", "Manchester City", "Real Sociedad"] },
-    { name: "Juan Mata", clubs: ["Valencia", "Chelsea", "Manchester United"] },
+    { name: "Juan Mata", clubs: ["Chelsea", "Manchester United", "Valencia"] },
     { name: "Fernando Torres", clubs: ["Atletico Madrid", "Liverpool", "Chelsea", "AC Milan"] },
     { name: "Diego Forlan", clubs: ["Manchester United", "Villarreal", "Atletico Madrid", "Inter Milan"] },
     { name: "Patrick Vieira", clubs: ["AC Milan", "Arsenal", "Juventus", "Inter Milan", "Manchester City"] },
@@ -89,7 +78,6 @@ const playersData = [
     { name: "Rodri", clubs: ["Villarreal", "Atletico Madrid", "Manchester City"] },
     { name: "Bernardo Silva", clubs: ["Monaco", "Manchester City"] },
     { name: "Bruno Fernandes", clubs: ["Udinese", "Sampdoria", "Manchester United"] },
-// --- Հարձակվողներ և Ռմբարկուներ ---
     { name: "Edinson Cavani", clubs: ["Napoli", "PSG", "Manchester United", "Valencia"] },
     { name: "Ruud van Nistelrooy", clubs: ["Manchester United", "Real Madrid", "Hamburg", "Malaga"] },
     { name: "David Villa", clubs: ["Valencia", "Barcelona", "Atletico Madrid"] },
@@ -107,14 +95,10 @@ const playersData = [
     { name: "Mauro Icardi", clubs: ["Sampdoria", "Inter Milan", "PSG"] },
     { name: "Alvaro Negredo", clubs: ["Sevilla", "Manchester City", "Valencia"] },
     { name: "Roberto Firmino", clubs: ["Hoffenheim", "Liverpool"] },
-
-    // --- Կիսապաշտպանության վարպետներ ---
-    { name: "Luka Modric", clubs: ["Tottenham", "Real Madrid"] },
     { name: "Ivan Perisic", clubs: ["Dortmund", "Wolfsburg", "Inter Milan", "Bayern Munich", "Tottenham"] },
     { name: "Christian Eriksen", clubs: ["Tottenham", "Inter Milan", "Brentford", "Manchester United"] },
     { name: "Miralem Pjanic", clubs: ["Lyon", "Roma", "Juventus", "Barcelona"] },
     { name: "Marco Verratti", clubs: ["PSG"] },
-    { name: "Bernardo Silva", clubs: ["Monaco", "Manchester City"] },
     { name: "Ilkay Gundogan", clubs: ["Dortmund", "Manchester City", "Barcelona"] },
     { name: "Declan Rice", clubs: ["West Ham", "Arsenal"] },
     { name: "Enzo Fernandez", clubs: ["Chelsea"] },
@@ -122,13 +106,9 @@ const playersData = [
     { name: "Bruno Guimaraes", clubs: ["Lyon", "Newcastle"] },
     { name: "Gavi", clubs: ["Barcelona"] },
     { name: "Pedri", clubs: ["Barcelona"] },
-    { name: "Jude Bellingham", clubs: ["Dortmund", "Real Madrid"] },
     { name: "Thiago Alcantara", clubs: ["Barcelona", "Bayern Munich", "Liverpool"] },
-    { name: "Arturo Vidal", clubs: ["Bayer Leverkusen", "Juventus", "Bayern Munich", "Barcelona", "Inter Milan"] },
     { name: "Sami Khedira", clubs: ["Stuttgart", "Real Madrid", "Juventus"] },
     { name: "Blaise Matuidi", clubs: ["Saint-Etienne", "PSG", "Juventus"] },
-
-    // --- Պաշտպանության հսկաներ ---
     { name: "Virgil van Dijk", clubs: ["Southampton", "Liverpool"] },
     { name: "Ruben Dias", clubs: ["Manchester City"] },
     { name: "Marquinhos", clubs: ["Roma", "PSG"] },
@@ -147,8 +127,6 @@ const playersData = [
     { name: "John Stones", clubs: ["Everton", "Manchester City"] },
     { name: "Kalidou Koulibaly", clubs: ["Napoli", "Chelsea"] },
     { name: "Jules Kounde", clubs: ["Sevilla", "Barcelona"] },
-
-    // --- Թոփ դարպասապահներ ---
     { name: "Alisson Becker", clubs: ["Roma", "Liverpool"] },
     { name: "Ederson", clubs: ["Manchester City"] },
     { name: "Jan Oblak", clubs: ["Atletico Madrid"] },
@@ -157,12 +135,8 @@ const playersData = [
     { name: "Emiliano Martinez", clubs: ["Arsenal", "Getafe", "Aston Villa"] },
     { name: "Gianluigi Donnarumma", clubs: ["AC Milan", "PSG"] },
     { name: "Yann Sommer", clubs: ["Monchengladbach", "Bayern Munich", "Inter Milan"] },
-
-    // --- Լեգենդներ (2000-2015) ---
     { name: "Alessandro Del Piero", clubs: ["Juventus"] },
     { name: "Francesco Totti", clubs: ["Roma"] },
-    { name: "Steven Gerrard", clubs: ["Liverpool"] },
-    { name: "Frank Lampard", clubs: ["West Ham", "Chelsea", "Manchester City"] },
     { name: "Paul Scholes", clubs: ["Manchester United"] },
     { name: "Ryan Giggs", clubs: ["Manchester United"] },
     { name: "Pavel Nedved", clubs: ["Lazio", "Juventus"] },
@@ -177,9 +151,6 @@ const playersData = [
     { name: "David Beckham", clubs: ["Manchester United", "Real Madrid", "AC Milan", "PSG"] },
     { name: "Fabio Cannavaro", clubs: ["Parma", "Inter Milan", "Juventus", "Real Madrid"] },
     { name: "Gianluca Zambrotta", clubs: ["Juventus", "Barcelona", "AC Milan"] },
-
-    // --- Ժամանակակից վինգերներ ---
-    { name: "Leroy Sane", clubs: ["Schalke 04", "Manchester City", "Bayern Munich"] },
     { name: "Serge Gnabry", clubs: ["Arsenal", "Werder Bremen", "Hoffenheim", "Bayern Munich"] },
     { name: "Kingsley Coman", clubs: ["PSG", "Juventus", "Bayern Munich"] },
     { name: "Ousmane Dembele", clubs: ["Rennes", "Dortmund", "Barcelona", "PSG"] },
@@ -188,51 +159,36 @@ const playersData = [
     { name: "Marcus Rashford", clubs: ["Manchester United"] },
     { name: "Luis Diaz", clubs: ["Liverpool"] },
     { name: "Federico Chiesa", clubs: ["Fiorentina", "Juventus", "Liverpool"] },
-// --- Գերմանական և Ֆրանսիական լիգաների աստղեր ---
     { name: "Juninho Pernambucano", clubs: ["Lyon"] },
     { name: "Michael Essien", clubs: ["Lyon", "Chelsea", "Real Madrid", "AC Milan"] },
     { name: "Florent Malouda", clubs: ["Lyon", "Chelsea"] },
     { name: "Eric Abidal", clubs: ["Lyon", "Barcelona", "Monaco"] },
-    { name: "Karim Benzema", clubs: ["Lyon", "Real Madrid"] },
     { name: "Ludovic Giuly", clubs: ["Monaco", "Barcelona", "Roma", "PSG"] },
     { name: "Dimitar Berbatov", clubs: ["Bayer Leverkusen", "Tottenham", "Manchester United", "Monaco"] },
     { name: "Klaas-Jan Huntelaar", clubs: ["Real Madrid", "AC Milan", "Schalke 04"] },
     { name: "Raul", clubs: ["Real Madrid", "Schalke 04"] },
-    { name: "Ivan Rakitic", clubs: ["Schalke 04", "Sevilla", "Barcelona"] },
-    { name: "Leroy Sane", clubs: ["Schalke 04", "Manchester City", "Bayern Munich"] },
     { name: "Lukas Podolski", clubs: ["Bayern Munich", "Arsenal", "Inter Milan"] },
     { name: "Shinji Kagawa", clubs: ["Dortmund", "Manchester United"] },
     { name: "Mario Gotze", clubs: ["Dortmund", "Bayern Munich", "Frankfurt"] },
     { name: "Marco Reus", clubs: ["Monchengladbach", "Dortmund"] },
-
-    // --- Իսպանական և Իտալական լիգաների վարպետներ ---
     { name: "Joaquin", clubs: ["Real Betis", "Valencia", "Fiorentina", "Malaga"] },
     { name: "Isco", clubs: ["Malaga", "Real Madrid", "Sevilla", "Real Betis"] },
-    { name: "Santi Cazorla", clubs: ["Villarreal", "Malaga", "Arsenal"] },
     { name: "Marcos Senna", clubs: ["Villarreal"] },
-    { name: "Diego Forlan", clubs: ["Manchester United", "Villarreal", "Atletico Madrid", "Inter Milan"] },
     { name: "Juan Roman Riquelme", clubs: ["Barcelona", "Villarreal"] },
-    { name: "Dani Parejo", clubs: ["Real Madrid", "Getafe", "Valencia", "Villarreal"] },
-    { name: "Ever Banega", clubs: ["Valencia", "Atletico Madrid", "Sevilla", "Inter Milan"] },
     { name: "Antonio Cassano", clubs: ["Roma", "Real Madrid", "Sampdoria", "AC Milan", "Inter Milan", "Parma"] },
     { name: "Alberto Gilardino", clubs: ["Parma", "AC Milan", "Fiorentina", "Genoa", "Bologna"] },
     { name: "Adrian Mutu", clubs: ["Inter Milan", "Parma", "Juventus", "Fiorentina"] },
-    { name: "Ciro Immobile", clubs: ["Juventus", "Genoa", "Torino", "Dortmund", "Sevilla", "Lazio"] },
     { name: "Sergej Milinkovic-Savic", clubs: ["Lazio"] },
     { name: "Luis Alberto", clubs: ["Liverpool", "Malaga", "Lazio"] },
     { name: "Marek Hamsik", clubs: ["Napoli"] },
     { name: "Lorenzo Insigne", clubs: ["Napoli"] },
     { name: "Dries Mertens", clubs: ["Napoli"] },
-
-    // --- Պրեմիեր Լիգայի հայտնի դեմքեր ---
     { name: "Jamie Vardy", clubs: ["Leicester City"] },
     { name: "Kasper Schmeichel", clubs: ["Manchester City", "Leicester City", "Nice"] },
     { name: "Wes Morgan", clubs: ["Leicester City"] },
     { name: "Wilfried Zaha", clubs: ["Manchester United", "Crystal Palace", "Lyon"] },
     { name: "Christian Benteke", clubs: ["Aston Villa", "Liverpool", "Crystal Palace"] },
-    { name: "Ashley Young", clubs: ["Aston Villa", "Manchester United", "Inter Milan", "Everton"] },
     { name: "Gareth Barry", clubs: ["Aston Villa", "Manchester City", "Everton"] },
-    { name: "James Milner", clubs: ["Leeds United", "Newcastle", "Aston Villa", "Manchester City", "Liverpool", "Brighton"] },
     { name: "Leighton Baines", clubs: ["Everton"] },
     { name: "Tim Cahill", clubs: ["Everton"] },
     { name: "Phil Jagielka", clubs: ["Everton", "Sheffield United"] },
@@ -240,10 +196,6 @@ const playersData = [
     { name: "Paolo Di Canio", clubs: ["AC Milan", "Juventus", "Napoli", "West Ham"] },
     { name: "Tomas Rosicky", clubs: ["Dortmund", "Arsenal"] },
     { name: "Mikel Arteta", clubs: ["Everton", "Arsenal"] },
-
-    // --- Պաշտպաններ և լեգենդար հետնապահներ ---
-    { name: "Patrice Evra", clubs: ["Monaco", "Manchester United", "Juventus", "Marseille", "West Ham"] },
-    { name: "Nemanja Vidic", clubs: ["Manchester United", "Inter Milan"] },
     { name: "Rio Ferdinand", clubs: ["West Ham", "Leeds United", "Manchester United"] },
     { name: "John Terry", clubs: ["Chelsea", "Aston Villa"] },
     { name: "Ricardo Carvalho", clubs: ["Chelsea", "Real Madrid", "Monaco"] },
@@ -260,8 +212,6 @@ const playersData = [
     { name: "Javier Zanetti", clubs: ["Inter Milan"] },
     { name: "Marco Materazzi", clubs: ["Everton", "Inter Milan"] },
     { name: "Maicon", clubs: ["Monaco", "Inter Milan", "Manchester City", "Roma"] },
-
-    // --- Հավելյալ դարպասապահներ ---
     { name: "Edwin van der Sar", clubs: ["Juventus", "Fulham", "Manchester United"] },
     { name: "Victor Valdes", clubs: ["Barcelona", "Manchester United"] },
     { name: "Pepe Reina", clubs: ["Barcelona", "Villarreal", "Liverpool", "Napoli", "Bayern Munich", "AC Milan", "Aston Villa", "Lazio"] },
@@ -269,24 +219,15 @@ const playersData = [
     { name: "Julio Cesar", clubs: ["Inter Milan"] },
     { name: "Dida", clubs: ["AC Milan"] },
     { name: "Fabien Barthez", clubs: ["Marseille", "Monaco", "Manchester United"] },
-// --- Իսպանական լիգայի (La Liga) վարպետներ ---
     { name: "Jesus Navas", clubs: ["Sevilla", "Manchester City"] },
-    { name: "Ivan Rakitic", clubs: ["Schalke 04", "Sevilla", "Barcelona"] },
     { name: "Gerard Moreno", clubs: ["Villarreal", "Espanyol"] },
-    { name: "Dani Parejo", clubs: ["Real Madrid", "Getafe", "Valencia", "Villarreal"] },
     { name: "Pau Torres", clubs: ["Villarreal", "Aston Villa"] },
     { name: "Yeremy Pino", clubs: ["Villarreal"] },
     { name: "Mikel Oyarzabal", clubs: ["Real Sociedad"] },
     { name: "Alexander Isak", clubs: ["Dortmund", "Real Sociedad", "Newcastle"] },
-    { name: "Martin Odegaard", clubs: ["Real Madrid", "Real Sociedad", "Arsenal"] },
-    { name: "David Silva", clubs: ["Valencia", "Manchester City", "Real Sociedad"] },
     { name: "Iago Aspas", clubs: ["Celta Vigo", "Liverpool", "Sevilla"] },
-    { name: "Ever Banega", clubs: ["Valencia", "Atletico Madrid", "Sevilla", "Inter Milan"] },
     { name: "Frederic Kanoute", clubs: ["West Ham", "Tottenham", "Sevilla"] },
     { name: "Luis Fabiano", clubs: ["Sevilla"] },
-    { name: "Santi Cazorla", clubs: ["Villarreal", "Malaga", "Arsenal"] },
-
-    // --- Իտալական լիգայի (Serie A) հայտնի դեմքեր ---
     { name: "Josip Ilicic", clubs: ["Palermo", "Fiorentina", "Atalanta"] },
     { name: "Alejandro Gomez", clubs: ["Atalanta", "Sevilla"] },
     { name: "Duvan Zapata", clubs: ["Napoli", "Udinese", "Sampdoria", "Atalanta", "Torino"] },
@@ -299,9 +240,7 @@ const playersData = [
     { name: "Joaquin Correa", clubs: ["Sampdoria", "Sevilla", "Lazio", "Inter Milan", "Marseille"] },
     { name: "Felipe Anderson", clubs: ["Lazio", "West Ham", "Porto"] },
     { name: "Stevan Jovetic", clubs: ["Fiorentina", "Manchester City", "Inter Milan", "Sevilla", "Monaco", "Hertha Berlin"] },
-
-    // --- Անգլիական Պրեմիեր Լիգայի (EPL) աստղեր ---
-    { name: "Heung-min Son", clubs: ["Bayer Leverkusen", "Tottenham"] },
+    { name: "Son Heung-min", clubs: ["Bayer Leverkusen", "Tottenham"] },
     { name: "Richarlison", clubs: ["Everton", "Tottenham"] },
     { name: "James Maddison", clubs: ["Leicester City", "Tottenham"] },
     { name: "Youri Tielemans", clubs: ["Monaco", "Leicester City", "Aston Villa"] },
@@ -310,13 +249,10 @@ const playersData = [
     { name: "Callum Wilson", clubs: ["Bournemouth", "Newcastle"] },
     { name: "Allan Saint-Maximin", clubs: ["Nice", "Newcastle"] },
     { name: "Joelinton", clubs: ["Hoffenheim", "Newcastle"] },
-    { name: "Bruno Guimaraes", clubs: ["Lyon", "Newcastle"] },
     { name: "Ollie Watkins", clubs: ["Aston Villa"] },
     { name: "Emiliano Buendia", clubs: ["Getafe", "Aston Villa"] },
     { name: "Leon Bailey", clubs: ["Bayer Leverkusen", "Aston Villa"] },
     { name: "Douglas Luiz", clubs: ["Girona", "Aston Villa", "Juventus"] },
-
-    // --- Գերմանական և Ֆրանսիական լիգաների ռմբարկուներ ---
     { name: "Patrik Schick", clubs: ["Sampdoria", "Roma", "RB Leipzig", "Bayer Leverkusen"] },
     { name: "Christopher Nkunku", clubs: ["PSG", "RB Leipzig", "Chelsea"] },
     { name: "Timo Werner", clubs: ["Stuttgart", "RB Leipzig", "Chelsea", "Tottenham"] },
